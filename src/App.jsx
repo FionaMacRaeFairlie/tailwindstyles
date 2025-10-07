@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import  { Fragment, useState } from 'react';
 
-export default function MyModal() {
+function MyModal() {
   let [isOpen, setIsOpen] = useState(true);
 
   function closeModal() {
@@ -81,3 +81,23 @@ export default function MyModal() {
     </>
   );
 }
+
+
+
+import Example from "./components/SimpleTransition";
+import Example1 from "./components/DropDown";
+import Example2 from "./components/Navigation";
+
+
+export default function App() {
+  return (
+    <div className="App">
+      <Example2 />
+      <Example />
+      <div style={{float:"right"}}><Example1 /></div>
+      <MyModal />
+    </div>
+  );
+}
+
+
